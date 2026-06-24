@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar glass">
+        <div class="logo">Portfolio</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+
+        <div class="hero-content glass">
+
+            <img src="imgs/profile1.jpg" alt="Profile"> <br><br>
+            <h4>Hello I'm</h4>
+            <h1>Akshaya Sai</h1>
+            <h3 id="typing"></h3>
+            <p>
+               Passionate professional creating impactful solutions through technology and innovation.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn">Download Resume</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about-container">
+
+            <div class="about-card glass">
+                <h3>Who Am I?</h3>
+
+                <p>
+                    Dedicated to exploring statistics, uncovering patterns in data, and solving real-world problems through analytical thinking.
+                </p>
+            </div>
+
+            <div class="about-card glass">
+                <h3>Career Objective</h3>
+
+                <p>
+                    To build a successful career in the technology industry by continuously learning, developing innovative solutions, and creating meaningful impact.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SERVICES -->
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education-container">
+
+            <div class="education-card glass">
+                <h3>Degree</h3>
+                <p>Sir C R Reddy College for Women,Eluru</p>
+                <p>2024 - 2027</p>
+            </div>
+
+            <div class="education-card glass">
+                <h3>Intermediate</h3>
+                <p>NRI Junior College,Eluru</p>
+                <p>2022 - 2024</p>
+            </div>
+
+            <div class="education-card glass">
+                <h3>Primary Education</h3>
+                <p>ZPHS Satrampadu</p>
+                <p>2021 - 2022</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card glass">HTML</div>
+            <div class="skill-card glass">CSS</div>
+            <div class="skill-card glass">JavaScript</div>
+            <div class="skill-card glass">SQL</div>
+            <div class="skill-card glass">Python</div>
+            <div class="skill-card glass">R</div>
+            <div class="skill-card glass">Photoshop</div>
+
+        </div>
+
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+
+        <h2>Certificates</h2>
+
+        <div class="certificate-container">
+
+            <div class="certificate-card glass">
+                <h3>Web Development</h3>
+                <p>Mapping Systems - 2026</p>
+            </div>
+
+            <div class="certificate-card glass">
+                <h3>Operations Management</h3>
+                <p>Saylor University - 2026</p>
+            </div>
+
+            <div class="certificate-card glass">
+                <h3>Internet Of Things</h3>
+                <p>Infosys Springboard - 2026</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-card glass">
+                <img src="images/project1.jpg" alt="">
+                <h3>Food Website</h3>
+                <p>Modern restaurant website design.</p>
+            </div>
+
+            <div class="project-card glass">
+                <img src="images/project2.jpg" alt="">
+                <h3>Travel Website</h3>
+                <p>Creative travel landing page.</p>
+            </div>
+
+            <div class="project-card glass">
+                <img src="images/project3.jpg" alt="">
+                <h3>Portfolio Design</h3>
+                <p>Personal branding portfolio.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <div class="contact-card glass">
+
+            <p>Email : akshayasaig7@gmail.com</p>
+            <p>Phone : +91 8978978133</p>
+            <p>LinkedIn : <a href="https://www.linkedin.com/in/akshaya-sai-824a25404" target="_blank" style="text-decoration: none;">My LinkedIn</a></p>
+            <p>GitHub : <a href="https://GitHub.com/akshaasai07" target="_blank" style="text-decoration: none;">My GitHub</a></p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="glass">
+        <p>© 2026 Glass Portfolio | All Rights Reserved</p>
+    </footer>
+    <script>
+        const text = [
+    "Web Developer",
+    "Data Analyst",
+    "Statistics Graduate"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type() {
+
+    if(count === text.length){
+        count = 0;
+    }
+
+        currentText = text[count];
+        letter = currentText.slice(0, ++index);
+
+        document.getElementById("typing").textContent = letter;
+
+        if(letter.length === currentText.length){
+        count++;
+        index = 0;
+        setTimeout(type, 1500);
+        } else {
+            setTimeout(type, 100);
+            }   
+
+        })();
+    </script>
+
+</body>
+</html>
