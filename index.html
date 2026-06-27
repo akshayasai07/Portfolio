@@ -32,13 +32,13 @@
             <img src="profile1.jpg" alt="Profile"> <br><br>
             <h4>Hello I'm</h4>
             <h1>Akshaya Sai</h1>
-            <h3 id="typing"></h3>
+            <h3 id="typing">Web Developer</h3>
             <p>
                Passionate professional creating impactful solutions through technology and innovation.
             </p>
 
             <div class="hero-buttons">
-                <a href="#" class="btn">Download Resume</a>
+                <a href="RESUME.pdf" class="btn">Download Resume</a>
             </div>
 
         </div>
@@ -114,7 +114,6 @@
             <div class="skill-card glass">SQL</div>
             <div class="skill-card glass">Python</div>
             <div class="skill-card glass">R</div>
-            <div class="skill-card glass">Photoshop</div>
 
         </div>
 
@@ -154,19 +153,13 @@
         <div class="project-container">
 
             <div class="project-card glass">
-                <img src="images/project1.jpg" alt="">
-                <h3>Food Website</h3>
-                <p>Modern restaurant website design.</p>
+                <img src="Project1.jpg.png" alt="">
+                <h3>Student Card</h3>
+                <p>Student registration form design (mini project).</p>
             </div>
 
             <div class="project-card glass">
-                <img src="images/project2.jpg" alt="">
-                <h3>Travel Website</h3>
-                <p>Creative travel landing page.</p>
-            </div>
-
-            <div class="project-card glass">
-                <img src="images/project3.jpg" alt="">
+                <img src="Project2.jpg.png" alt="">
                 <h3>Portfolio Design</h3>
                 <p>Personal branding portfolio.</p>
             </div>
@@ -196,39 +189,6 @@
     <footer class="glass">
         <p>© 2026 Glass Portfolio | All Rights Reserved</p>
     </footer>
-    <script>
-        const text = [
-    "Web Developer",
-    "Data Analyst",
-    "Statistics Graduate"
-];
-
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-(function type() {
-
-    if(count === text.length){
-        count = 0;
-    }
-
-        currentText = text[count];
-        letter = currentText.slice(0, ++index);
-
-        document.getElementById("typing").textContent = letter;
-
-        if(letter.length === currentText.length){
-        count++;
-        index = 0;
-        setTimeout(type, 1500);
-        } else {
-            setTimeout(type, 100);
-            }   
-
-        })();
-    </script>
-
+   
 </body>
 </html>
